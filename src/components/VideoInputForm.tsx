@@ -69,6 +69,7 @@ export default function VideoInputForm() {
         setTranscript(null);
       } else {
         const transcriptData = await response.json();
+        console.log('transcript data -->',transcriptData);
         // Assuming the API returns transcript objects with 'text' and 'start' (in seconds) or 'offset' (in ms)
         // The original code used entry.start.toFixed(2)
         // If transcriptData.transcript[0] has 'offset', use entry.offset / 1000 for time
