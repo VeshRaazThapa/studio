@@ -1,4 +1,4 @@
-import { YoutubeTranscript } from 'youtube-transcript';
+import { YoutubeTranscript } from 'youtube-transcript-api';
 import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
