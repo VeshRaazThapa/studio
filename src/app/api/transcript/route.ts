@@ -1,4 +1,4 @@
-import TranscriptClient from 'youtube-transcript-api';
+import TranscriptAPI from 'youtube-transcript-api';
 import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
@@ -16,22 +16,15 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Invalid YouTube URL' }, { status: 400 });
     }
 
-    const client = new TranscriptClient();
-    // @ts-expect-error According to the user's snippet, client.ready might be a property/promise.
-    // If this causes an error, it might need to be removed or handled differently based on the actual library's API.
-    if (typeof client.ready !== 'undefined') {
-        await client.ready; 
-    }
-
-    const transcript = await client.getTranscript(videoId);
+    // youtube-transcript-api@3.0.0 (BenSpark) uses a static method
+    const transcript = await TranscriptAPI.getTranscript(videoId);
+    
     console.log('Transcript fetched via youtube-transcript-api:', transcript);
     return NextResponse.json({ transcript });
   } catch (error: any) {
     console.error('Error fetching transcript with youtube-transcript-api:', error);
-    // Send a more generic error message to the client for security
     let errorMessage = 'Failed to fetch transcript';
     if (error.message) {
-        // Some errors from libraries might be too revealing
         if (error.message.includes('TranscriptsDisabled') || error.message.includes('NoTranscriptFound')) {
             errorMessage = 'Transcripts are disabled or not available for this video.';
         } else if (error.message.includes('network error') || error.message.includes('fetch failed')) {
