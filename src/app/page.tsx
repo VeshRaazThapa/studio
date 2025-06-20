@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <div className="container mx-auto py-8 px-4 flex flex-col items-center">
       <section className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4 text-primary">Welcome to Edutube</h1>
+        {/* <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4 text-primary">Welcome to Learnify</h1> */}
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
           Transform any YouTube video into an interactive learning experience. Paste a video URL below to get started with AI-generated quizzes.
         </p>

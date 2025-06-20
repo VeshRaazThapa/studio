@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import Header from '@/components/Header';
 
 export const metadata: Metadata = {
-  title: 'Edutube',
+  title: 'Learnify',
   description: 'Turn YouTube videos into interactive learning experiences with AI-generated quizzes.',
 };
 
