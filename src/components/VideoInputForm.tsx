@@ -129,6 +129,11 @@ export default function VideoInputForm() {
                       placeholder="https://www.youtube.com/watch?v=..." 
                       {...field} 
                       disabled={isLoadingTranscript} 
+                      onPaste={(e) => {
+                        const pastedText = e.clipboardData.getData('text');
+                        form.setValue("videoUrl", pastedText);
+                        form.trigger("videoUrl");
+                      }}
                     />
                   </div>
                 </FormControl>

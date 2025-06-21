@@ -1,0 +1,1051 @@
+{
+    "courseTitle": "C++ Tutorial for Beginners - Learn C++ in 1 Hour",
+    "author": "Programming with Mosh",
+    "units": [
+      {
+        "unitNumber": 1,
+        "unitTitle": "Introduction & Setup",
+        "chapters": [
+          {
+            "chapterNumber": 1,
+            "chapterTitle": "Introduction to C++",
+            "startTime": 2.36,
+            "quizz": [
+              {
+                "question": "According to the instructor, C++ is a good choice for what kind of applications?",
+                "options": [
+                  "Simple websites",
+                  "Performance-critical applications",
+                  "Mobile apps only",
+                  "Data analysis scripts"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "Which of these companies is mentioned as a user of C++?",
+                "options": [
+                  "Facebook",
+                  "Apple",
+                  "Adobe",
+                  "Twitter"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "What two things does the instructor say you need to learn to master C++?",
+                "options": [
+                  "The C++ language and its history",
+                  "The C++ language and computer hardware",
+                  "The C++ language and the Standard Library (STL)",
+                  "The C++ language and web development"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "What does the Standard Library (STL) provide?",
+                "options": [
+                  "A collection of pre-written C++ code",
+                  "A way to design user interfaces",
+                  "A compiler for C++",
+                  "A text editor"
+                ],
+                "correctAnswerIndex": 0
+              },
+              {
+                "question": "What is the instructor's main point about learning C++?",
+                "options": [
+                  "You must learn every single feature to be effective",
+                  "It's an outdated language and not worth learning",
+                  "It's only for building video games",
+                  "You don't need to learn all of C++ to write substantial programs"
+                ],
+                "correctAnswerIndex": 3
+              }
+            ]
+          },
+          {
+            "chapterNumber": 2,
+            "chapterTitle": "Setting Up the Development Environment",
+            "startTime": 259.639,
+            "quizz": [
+              {
+                "question": "What does IDE stand for?",
+                "options": [
+                  "Integrated Design Environment",
+                  "Internal Development Engine",
+                  "Integrated Development Environment",
+                  "Interactive Design Engine"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "Which IDE is recommended for Mac users in the video?",
+                "options": [
+                  "Visual Studio",
+                  "Xcode",
+                  "Notepad++",
+                  "Sublime Text"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "What is the key feature of the CLion IDE mentioned in the video?",
+                "options": [
+                  "It is only for Windows",
+                  "It is cross-platform (Windows, Mac, Linux)",
+                  "It is completely free forever",
+                  "It does not require a compiler"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "What IDE does the instructor use throughout the course?",
+                "options": [
+                  "Visual Studio Community",
+                  "Xcode",
+                  "CLion",
+                  "VS Code"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "What advice is given for Mac users downloading CLion?",
+                "options": [
+                  "To download the oldest version",
+                  "To download the version for Windows",
+                  "To download the correct build for their processor (Intel or Apple Silicon)",
+                  "To only use the free trial"
+                ],
+                "correctAnswerIndex": 2
+              }
+            ]
+          },
+          {
+            "chapterNumber": 3,
+            "chapterTitle": "Your First C++ Program ('Hello World')",
+            "startTime": 376.639,
+            "quizz": [
+              {
+                "question": "What is the special function that serves as the entry point to a C++ program?",
+                "options": [
+                  "start()",
+                  "program()",
+                  "main()",
+                  "entry()"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "What does `int` before the `main` function signify?",
+                "options": [
+                  "The function takes an integer as input",
+                  "The function returns an integer value",
+                  "The function is internal",
+                  "The function has an error"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "Which header file do you need to include to print something to the screen?",
+                "options": [
+                  "<stream>",
+                  "<inputoutput>",
+                  "<console>",
+                  "<iostream>"
+                ],
+                "correctAnswerIndex": 3
+              },
+              {
+                "question": "What does `std::cout` represent?",
+                "options": [
+                  "Standard Console Utility",
+                  "Standard Character Output",
+                  "System Console Output",
+                  "Standard Character Utility"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "What does returning the value `0` from the `main` function typically indicate?",
+                "options": [
+                  "The program encountered an error",
+                  "The program is waiting for input",
+                  "The program terminated successfully",
+                  "The program has no output"
+                ],
+                "correctAnswerIndex": 2
+              }
+            ]
+          },
+          {
+            "chapterNumber": 4,
+            "chapterTitle": "Compiling and Running the Program",
+            "startTime": 821.72,
+            "quizz": [
+              {
+                "question": "What is the process of converting C++ code into machine code called?",
+                "options": [
+                  "Translating",
+                  "Interpreting",
+                  "Executing",
+                  "Compiling"
+                ],
+                "correctAnswerIndex": 3
+              },
+              {
+                "question": "If you compile a C++ program on Windows, can you run the resulting executable on a Mac?",
+                "options": [
+                  "Yes, C++ is platform-independent",
+                  "No, it must be recompiled on the Mac",
+                  "Only if you have special software",
+                  "Yes, but it will be very slow"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "What is the window that shows the output of a console application called?",
+                "options": [
+                  "The Output Box",
+                  "The Display Window",
+                  "The Console or Terminal",
+                  "The Result Screen"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "What is the most likely cause of a compilation error for a beginner?",
+                "options": [
+                  "A computer virus",
+                  "A typo or a missing semicolon",
+                  "The operating system is too old",
+                  "The program is too complex"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "What does the instructor suggest is the 'first skill of a good programmer'?",
+                "options": [
+                  "Speed",
+                  "Patience",
+                  "Memorization",
+                  "Mathematics"
+                ],
+                "correctAnswerIndex": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "unitNumber": 2,
+        "unitTitle": "C++ Basics",
+        "chapters": [
+          {
+            "chapterNumber": 5,
+            "chapterTitle": "Variables",
+            "startTime": 1197.64,
+            "quizz": [
+              {
+                "question": "In programming, what are variables used for?",
+                "options": [
+                  "To permanently store data on the hard drive",
+                  "To temporarily store data in the computer's memory",
+                  "To define the program's color scheme",
+                  "To store the program's executable file"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "What is it called when you assign a value to a variable for the first time?",
+                "options": [
+                  "Defining a variable",
+                  "Declaring a variable",
+                  "Initializing a variable",
+                  "Calling a variable"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "What happens if you use a variable in C++ without initializing it first?",
+                "options": [
+                  "It automatically gets the value 0",
+                  "The program will not compile",
+                  "It will contain a random or 'garbage' value",
+                  "The program will crash at runtime"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "To swap the values of two variables, `a` and `b`, what is the common technique shown?",
+                "options": [
+                  "Set `a = b` and then `b = a`",
+                  "Use a third temporary variable",
+                  "Use a special `swap()` function",
+                  "It's not possible to swap them"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "What is the best practice for declaring multiple variables?",
+                "options": [
+                  "Declare each variable on a separate line",
+                  "Declare all variables of the same type on one line",
+                  "Declare all variables for the program on the first line",
+                  "Avoid declaring multiple variables"
+                ],
+                "correctAnswerIndex": 0
+              }
+            ]
+          },
+          {
+            "chapterNumber": 6,
+            "chapterTitle": "Constants",
+            "startTime": 1566.279,
+            "quizz": [
+              {
+                "question": "What is the purpose of a constant?",
+                "options": [
+                  "To store a value that can change frequently",
+                  "To create a variable that is easy to remember",
+                  "To ensure the value of a variable cannot be changed after initialization",
+                  "To store complex mathematical formulas"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "Which keyword is used to declare a constant in C++?",
+                "options": [
+                  "static",
+                  "final",
+                  "const",
+                  "constant"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "In the example, the variable `pi` is made a constant. Why?",
+                "options": [
+                  "To make the program run faster",
+                  "To prevent its mathematical value from being accidentally changed",
+                  "Because all double variables must be constants",
+                  "To save memory"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "What happens if you try to change the value of a constant after it's been declared?",
+                "options": [
+                  "It will generate a warning, but the program will run",
+                  "The value will change, but only for that one time",
+                  "It will cause a compilation error",
+                  "The program will crash"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "When is it a good practice to use a constant?",
+                "options": [
+                  "For any variable that stores a number",
+                  "Only for variables used in loops",
+                  "For values that you know should never change, like a tax rate or mathematical constant",
+                  "Only for variables that store text"
+                ],
+                "correctAnswerIndex": 2
+              }
+            ]
+          },
+          {
+            "chapterNumber": 7,
+            "chapterTitle": "Naming Conventions",
+            "startTime": 1654.64,
+            "quizz": [
+              {
+                "question": "What is the 'snake_case' naming convention?",
+                "options": [
+                  "CapitalizingTheFirstLetterOfEveryWord",
+                  "using all lowercase letters and separating words with an underscore",
+                  "startingWithALowercaseLetterAndCapitalizingSubsequentWords",
+                  "USING_ALL_CAPITAL_LETTERS"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "The variable `FileSize` is an example of which naming convention?",
+                "options": [
+                  "camelCase",
+                  "snake_case",
+                  "Hungarian notation",
+                  "PascalCase"
+                ],
+                "correctAnswerIndex": 3
+              },
+              {
+                "question": "The variable `fileSize` is an example of which naming convention?",
+                "options": [
+                  "PascalCase",
+                  "snake_case",
+                  "camelCase",
+                  "Hungarian notation"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "Why is Hungarian notation (e.g., `iFileSize`) considered less relevant now?",
+                "options": [
+                  "It is too difficult to type",
+                  "It is not supported by modern compilers",
+                  "Modern editors can easily show a variable's type, making the prefix redundant",
+                  "It only works for integer types"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "What is the main reason for being consistent with a naming convention?",
+                "options": [
+                  "It makes the code run faster",
+                  "The compiler requires it",
+                  "It makes the code easier to read, understand, and maintain",
+                  "It uses less memory"
+                ],
+                "correctAnswerIndex": 2
+              }
+            ]
+          },
+          {
+            "chapterNumber": 8,
+            "chapterTitle": "Mathematical Expressions",
+            "startTime": 1831.159,
+            "quizz": [
+              {
+                "question": "In the expression `x + y`, what are `x` and `y` called?",
+                "options": [
+                  "Operators",
+                  "Variables",
+                  "Operands",
+                  "Integers"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "If you divide two integers (e.g., `10 / 3`), what will the result's data type be?",
+                "options": [
+                  "A double",
+                  "An integer",
+                  "A float",
+                  "A string"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "What does the modulus operator (`%`) do?",
+                "options": [
+                  "Calculates the percentage of a number",
+                  "Performs division",
+                  "Returns the remainder of a division",
+                  "Finds the average of two numbers"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "What is the shorter way to write `x = x + 1`?",
+                "options": [
+                  "x+1",
+                  "x++",
+                  "x=+1",
+                  "add one x"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "If `x` is 10, and you execute `y = x++`, what will the values of `x` and `y` be?",
+                "options": [
+                  "x will be 11, y will be 11",
+                  "x will be 10, y will be 11",
+                  "x will be 11, y will be 10",
+                  "x will be 10, y will be 10"
+                ],
+                "correctAnswerIndex": 2
+              }
+            ]
+          },
+          {
+            "chapterNumber": 9,
+            "chapterTitle": "Order of Operations",
+            "startTime": 2204.2,
+            "quizz": [
+              {
+                "question": "In C++, which operators have a higher priority?",
+                "options": [
+                  "Addition and Subtraction",
+                  "Multiplication and Division",
+                  "All operators have the same priority",
+                  "The leftmost operator is always first"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "What is the result of the expression `1 + 2 * 3`?",
+                "options": [
+                  "9",
+                  "7",
+                  "6",
+                  "It's an error"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "How can you change the default order of operations?",
+                "options": [
+                  "Using square brackets `[]`",
+                  "Using special keywords",
+                  "You cannot change the order",
+                  "Using parentheses `()`"
+                ],
+                "correctAnswerIndex": 3
+              },
+              {
+                "question": "What is the result of the expression `(1 + 2) * 3`?",
+                "options": [
+                  "7",
+                  "6",
+                  "9",
+                  "10"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "Why is understanding operator precedence important?",
+                "options": [
+                  "To ensure calculations are performed in the correct order and produce the correct result",
+                  "To make the code look more professional",
+                  "To help the compiler run faster",
+                  "It's only important in other programming languages"
+                ],
+                "correctAnswerIndex": 0
+              }
+            ]
+          },
+          {
+            "chapterNumber": 10,
+            "chapterTitle": "Writing to the Console",
+            "startTime": 2394.16,
+            "quizz": [
+              {
+                "question": "In programming, what does a 'stream' represent?",
+                "options": [
+                  "A flow of electricity",
+                  "A sequence of characters",
+                  "A video file",
+                  "A network connection"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "What is the `<<` operator called?",
+                "options": [
+                  "The less-than operator",
+                  "The push operator",
+                  "The stream insertion operator",
+                  "The console operator"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "What is the purpose of `std::endl`?",
+                "options": [
+                  "To end the program",
+                  "To delete the last character",
+                  "To insert a new line character and flush the stream",
+                  "To create a space"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "How can you print multiple items in a single statement?",
+                "options": [
+                  "By using multiple `cout` statements",
+                  "By using commas to separate items",
+                  "By chaining stream insertion operators (`<<`)",
+                  "It is not possible"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "What does the `using namespace std;` directive do?",
+                "options": [
+                  "It makes the code run faster",
+                  "It allows you to use names from the `std` namespace without the `std::` prefix",
+                  "It is required to use the standard library",
+                  "It helps in debugging the code"
+                ],
+                "correctAnswerIndex": 1
+              }
+            ]
+          },
+          {
+            "chapterNumber": 11,
+            "chapterTitle": "Reading Input from the Console",
+            "startTime": 2951.0,
+            "quizz": [
+              {
+                "question": "Which object is used to read input from the console?",
+                "options": [
+                  "cout",
+                  "cin",
+                  "cread",
+                  "cinput"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "What is the `>>` operator called?",
+                "options": [
+                  "Stream insertion operator",
+                  "Greater-than operator",
+                  "Stream extraction operator",
+                  "Get operator"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "If you are reading into an `int` variable but the user enters `10.5`, what value gets stored?",
+                "options": [
+                  "10.5",
+                  "11",
+                  "10",
+                  "An error occurs"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "How can you read two values, for `x` and `y`, from the user in a single line of code?",
+                "options": [
+                  "`cin >> x, y;`",
+                  "`cin >> x >> y;`",
+                  "`cin(x, y);`",
+                  "You must use two separate `cin` statements"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "What is a good practice before asking a user for input?",
+                "options": [
+                  "Clear the screen",
+                  "Print a label to the console telling the user what to enter",
+                  "Check if the keyboard is connected",
+                  "Assume the user knows what to do"
+                ],
+                "correctAnswerIndex": 1
+              }
+            ]
+          },
+          {
+            "chapterNumber": 12,
+            "chapterTitle": "Working with the Standard Library (cmath)",
+            "startTime": 3226.04,
+            "quizz": [
+              {
+                "question": "Which header file provides useful mathematical functions?",
+                "options": [
+                  "<math>",
+                  "<iostream>",
+                  "<cstd>",
+                  "<cmath>"
+                ],
+                "correctAnswerIndex": 3
+              },
+              {
+                "question": "What does the `floor()` function do?",
+                "options": [
+                  "Rounds a number to the nearest integer",
+                  "Rounds a number up to the nearest integer",
+                  "Rounds a number down to the nearest integer",
+                  "Calculates the absolute value of a number"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "Which function would you use to calculate `2` to the power of `3`?",
+                "options": [
+                  "power(2, 3)",
+                  "exp(2, 3)",
+                  "pow(2, 3)",
+                  "sqr(2, 3)"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "In the exercise, what is the formula for calculating the area of a circle?",
+                "options": [
+                  "pi * radius",
+                  "2 * pi * radius",
+                  "pi * pow(radius, 2)",
+                  "pi * (radius / 2)"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "What are the values passed to a function called?",
+                "options": [
+                  "Parameters",
+                  "Results",
+                  "Variables",
+                  "Arguments"
+                ],
+                "correctAnswerIndex": 3
+              }
+            ]
+          },
+          {
+            "chapterNumber": 13,
+            "chapterTitle": "Comments",
+            "startTime": 3504.52,
+            "quizz": [
+              {
+                "question": "How do you start a single-line comment in C++?",
+                "options": [
+                  "//",
+                  "/*",
+                  "#",
+                  "--"
+                ],
+                "correctAnswerIndex": 0
+              },
+              {
+                "question": "How do you start a multi-line comment block?",
+                "options": [
+                  "//",
+                  "/**",
+                  "/*",
+                  "<!--"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "According to the instructor, what should comments explain?",
+                "options": [
+                  "The 'what' (what the code is doing)",
+                  "The 'why' and 'how' (assumptions and reasons)",
+                  "Every single line of code",
+                  "Only the variables"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "What is the danger of overusing comments?",
+                "options": [
+                  "They can make the program run slower",
+                  "They use too much memory",
+                  "They can make the code harder to understand and maintain",
+                  "They can introduce bugs"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "Why is a comment like `// declare a variable` considered a bad comment?",
+                "options": [
+                  "It is too long",
+                  "It uses the wrong syntax",
+                  "It is obvious and explains the 'what' instead of the 'why'",
+                  "It should be a multi-line comment"
+                ],
+                "correctAnswerIndex": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "unitNumber": 3,
+        "unitTitle": "Data Types in Detail",
+        "chapters": [
+          {
+            "chapterNumber": 14,
+            "chapterTitle": "Fundamental Data Types",
+            "startTime": 3705.96,
+            "quizz": [
+              {
+                "question": "Why is C++ called a 'statically typed' language?",
+                "options": [
+                  "Because variables are static and cannot be moved",
+                  "Because the type of a variable must be specified at declaration and cannot change",
+                  "Because it has a static set of features",
+                  "Because variables are stored in static memory"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "Which data type would you use to store a small whole number like `500` to save memory?",
+                "options": [
+                  "int",
+                  "long long",
+                  "short",
+                  "double"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "Which data type is recommended for storing monetary values to avoid loss of accuracy?",
+                "options": [
+                  "int",
+                  "float",
+                  "double",
+                  "long double"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "What kind of values does the `bool` data type store?",
+                "options": [
+                  "Numbers",
+                  "Single characters",
+                  "True and false values",
+                  "Text strings"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "What is the `char` data type used for?",
+                "options": [
+                  "Storing whole numbers",
+                  "Storing floating-point numbers",
+                  "Storing a list of values",
+                  "Storing single characters"
+                ],
+                "correctAnswerIndex": 3
+              }
+            ]
+          },
+          {
+            "chapterNumber": 15,
+            "chapterTitle": "Initializing Variables",
+            "startTime": 3890.359,
+            "quizz": [
+              {
+                "question": "When initializing a `float` variable, what suffix should you add to the number?",
+                "options": [
+                  "d for double",
+                  "f for float",
+                  "i for integer",
+                  "No suffix is needed"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "What is the purpose of the `auto` keyword when declaring a variable?",
+                "options": [
+                  "It automatically sets the variable to 0",
+                  "It lets the compiler infer the data type from the initialization value",
+                  "It makes the variable a constant",
+                  "It automatically allocates memory"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "What is it called when you initialize a variable using `{}` instead of `=`?",
+                "options": [
+                  "Assignment initialization",
+                  "Bracket initialization",
+                  "Brace initialization",
+                  "Function initialization"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "What is a key benefit of brace initialization, e.g., `int number {1.2};`?",
+                "options": [
+                  "It automatically rounds the number",
+                  "It is faster than assignment initialization",
+                  "It prevents narrowing conversions by causing a compilation error",
+                  "It allows you to store a double in an int"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "If you declare `int number {};`, what value will `number` have?",
+                "options": [
+                  "A garbage value",
+                  "1",
+                  "The program will not compile",
+                  "0"
+                ],
+                "correctAnswerIndex": 3
+              }
+            ]
+          },
+          {
+            "chapterNumber": 16,
+            "chapterTitle": "Number Systems (Decimal, Binary, Hexadecimal)",
+            "startTime": 4174.279,
+            "quizz": [
+              {
+                "question": "What is the base for the binary number system?",
+                "options": [
+                  "Base-10",
+                  "Base-16",
+                  "Base-2",
+                  "Base-8"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "What prefix do you use to represent a number in the binary system in C++?",
+                "options": [
+                  "0x",
+                  "0b",
+                  "0d",
+                  "0h"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "What prefix do you use to represent a number in the hexadecimal system in C++?",
+                "options": [
+                  "0h",
+                  "0b",
+                  "0x",
+                  "0d"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "What is a common use for hexadecimal numbers in programming?",
+                "options": [
+                  "Counting loop iterations",
+                  "Representing colors",
+                  "Storing user ages",
+                  "Calculating tax"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "What is the decimal equivalent of the hexadecimal number `FF`?",
+                "options": [
+                  "1515",
+                  "16",
+                  "255",
+                  "100"
+                ],
+                "correctAnswerIndex": 2
+              }
+            ]
+          },
+          {
+            "chapterNumber": 17,
+            "chapterTitle": "Narrowing Conversions",
+            "startTime": 4387.96,
+            "quizz": [
+              {
+                "question": "What is a 'narrowing conversion'?",
+                "options": [
+                  "Converting a small number to a larger type",
+                  "Initializing a variable of a smaller type with a value from a larger type",
+                  "Converting a number to a string",
+                  "Making a number negative"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "What is likely to happen if you store the integer `1,000,000` into a `short` variable?",
+                "options": [
+                  "The program will run faster",
+                  "The `short` will successfully store `1,000,000`",
+                  "A loss of data will occur, and the stored value will be incorrect",
+                  "The program will crash at runtime"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "How does brace initialization `{}` handle potential narrowing conversions?",
+                "options": [
+                  "It allows them but gives a warning",
+                  "It performs them correctly without data loss",
+                  "It prevents them by causing a compilation error",
+                  "It ignores them completely"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "Is converting a `short` to an `int` a narrowing conversion?",
+                "options": [
+                  "Yes, always",
+                  "Only if the number is negative",
+                  "No, because an `int` can hold any value a `short` can",
+                  "Yes, because they are different types"
+                ],
+                "correctAnswerIndex": 2
+              },
+              {
+                "question": "The video shows that storing `1,000,000` in a `short` results in the value `16,000`. Why?",
+                "options": [
+                  "It's a random number",
+                  "It's the result of data loss from the narrowing conversion",
+                  "It's a special code for an error",
+                  "The compiler is rounding the number"
+                ],
+                "correctAnswerIndex": 1
+              }
+            ]
+          },
+          {
+            "chapterNumber": 18,
+            "chapterTitle": "Generating Random Numbers",
+            "startTime": 4521.88,
+            "quizz": [
+              {
+                "question": "Which function is used to generate a pseudo-random number?",
+                "options": [
+                  "random()",
+                  "generate()",
+                  "time()",
+                  "rand()"
+                ],
+                "correctAnswerIndex": 3
+              },
+              {
+                "question": "Why do you get the same 'random' number every time you run the program initially?",
+                "options": [
+                  "Because the computer is not random",
+                  "Because the random number generator needs to be 'seeded'",
+                  "Because it's a bug in C++",
+                  "Because the number is stored in a file"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "Which function is used to 'seed' the random number generator?",
+                "options": [
+                  "seed()",
+                  "srand()",
+                  "rand_seed()",
+                  "init_rand()"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "What is a common way to get a different seed value each time the program runs?",
+                "options": [
+                  "Asking the user for a number",
+                  "Using the current time",
+                  "Using a fixed number like 5",
+                  "Reading a value from a file"
+                ],
+                "correctAnswerIndex": 1
+              },
+              {
+                "question": "How do you limit a random number to be between 0 and 9?",
+                "options": [
+                  "rand() + 10",
+                  "rand() / 10",
+                  "rand() * 10",
+                  "rand() % 10"
+                ],
+                "correctAnswerIndex": 3
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

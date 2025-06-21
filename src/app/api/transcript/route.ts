@@ -1,7 +1,13 @@
 import TranscriptClient from 'youtube-transcript-api';
 import { NextResponse } from 'next/server';
+import transcript from '@/common/transcript.json'; // adjust based on `baseUrl` or relative path
 
 export async function POST(request: Request) {
+
+  return NextResponse.json(
+    transcript
+  );
+
   try {
     const { videoUrl } = await request.json();
 
@@ -41,7 +47,7 @@ export async function POST(request: Request) {
       title: fullTranscriptData.title,
       author: fullTranscriptData.author,
       transcript: simplifiedTranscript,
-    });
+    })
   } catch (error: any) {
     console.error('Error fetching transcript with youtube-transcript-api:', error);
     let errorMessage = 'Failed to fetch transcript';

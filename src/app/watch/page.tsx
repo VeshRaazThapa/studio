@@ -14,7 +14,19 @@ async function QuizLoader({ videoUrl }: { videoUrl: string }) {
   let error: string | null = null;
 
   try {
-    const result = await generateQuizQuestions({ videoUrl });
+ let result;
+    // dummy result
+    result = {
+    questions: [
+            { question: "What is the main topic of the video?", options: ["Science", "History", "Art", "Music"] },
+            { question: "What year was the event discussed in the video?", options: ["1900", "1950", "2000", "2020"], correctAnswerIndex: 0 },
+            { question: "Who was the key figure mentioned?", options: ["Alice", "Bob", "Charlie", "David"], correctAnswerIndex: 0 },
+            { question: "What is the primary color shown?", options: ["Red", "Blue", "Green", "Yellow"], correctAnswerIndex: 0 },
+            { question: "How many steps were outlined?", options: ["One", "Two", "Three", "Four"], correctAnswerIndex: 0 }
+          ].map(q => ({ ...q, correctAnswerIndex: 0 }))
+        }
+
+    // const result = await generateQuizQuestions({ videoUrl });
     quizData = result.questions;
     if (!quizData || quizData.length === 0) {
         error = "The AI could not generate questions for this video. It might be too short, private, or have content restrictions.";
