@@ -1,6 +1,13 @@
-
 "use client";
 import { useEffect} from 'react';
+
+// Add YouTube API types
+declare global {
+  interface Window {
+    YT: any;
+    onYouTubeIframeAPIReady: () => void;
+  }
+}
 
 export default function VideoPlayer({ videoUrl, onTimeUpdate, playerRef }: { videoUrl: string, onTimeUpdate: (time: number) => void, playerRef: React.MutableRefObject<any> }) {
   const getYoutubeVideoId = (url:string | null) => {
@@ -19,7 +26,18 @@ export default function VideoPlayer({ videoUrl, onTimeUpdate, playerRef }: { vid
     const setupPlayer = () => {
       playerRef.current = new window.YT.Player(`player-${videoId}`, {
         videoId,
-        events: { onReady: () => setInterval(syncPlayerState, 500) }
+        events: { 
+          onReady: () => {
+            // Update time more frequently for better tracking
+            setInterval(syncPlayerState, 100);
+          },
+          onStateChange: (event: any) => {
+            // Also update time when state changes (play, pause, etc.)
+            if (event.data === 1) { // Playing
+              syncPlayerState();
+            }
+          }
+        }
       });
     };
     if (!window.YT) {
@@ -33,9 +51,11 @@ export default function VideoPlayer({ videoUrl, onTimeUpdate, playerRef }: { vid
   }, [videoId]);
 
   const syncPlayerState = () => {
-    if (playerRef.current && typeof playerRef.current.getPlayerState === 'function' && playerRef.current.getPlayerState() === 1) {
+    if (playerRef.current && typeof playerRef.current.getCurrentTime === 'function') {
       const newTime = playerRef.current.getCurrentTime();
-      onTimeUpdate(newTime);
+      if (newTime !== undefined && newTime >= 0) {
+        onTimeUpdate(newTime);
+      }
     }
   };
 

@@ -1,7 +1,13 @@
-import YoutubeTranscript from 'youtube-transcript-api';
+import TranscriptClient from 'youtube-transcript-api';
 import { NextResponse } from 'next/server';
+import transcript from '@/common/transcript.json'; // adjust based on `baseUrl` or relative path
 
 export async function POST(request: Request) {
+
+  return NextResponse.json(
+    transcript
+  );
+
   try {
     const { videoUrl } = await request.json();
 
@@ -16,24 +22,32 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Invalid YouTube URL' }, { status: 400 });
     }
 
-    const transcriptData = await YoutubeTranscript.getTranscript(videoId);
+    const client = new TranscriptClient();
+    await client.ready;
 
-    if (!transcriptData || transcriptData.length === 0) {
+    const fullTranscriptData = await client.getTranscript(videoId);
+
+    // fullTranscriptData has the structure you posted, including "tracks"
+    // Let's pick the first track's transcript if available
+    const firstTrack = fullTranscriptData.tracks?.[0];
+
+    if (!firstTrack || !firstTrack.transcript) {
       return NextResponse.json({ error: 'No transcript available' }, { status: 404 });
     }
 
-    // The library returns objects with text, offset (in ms), and duration (in ms).
-    // Convert offset and duration to seconds.
-    const simplifiedTranscript = transcriptData.map(({ text, offset, duration }) => ({
+    // Map to simplified array of lines with start time (number), duration (number), and text
+    const simplifiedTranscript = firstTrack.transcript.map(({ text, start, dur }) => ({
       text,
-      start: offset / 1000,
-      duration: duration / 1000,
+      start: parseFloat(start),
+      duration: parseFloat(dur),
     }));
 
     return NextResponse.json({
-      id: videoId,
+      id: fullTranscriptData.id,
+      title: fullTranscriptData.title,
+      author: fullTranscriptData.author,
       transcript: simplifiedTranscript,
-    });
+    })
   } catch (error: any) {
     console.error('Error fetching transcript with youtube-transcript-api:', error);
     let errorMessage = 'Failed to fetch transcript';
