@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef, useMemo, Suspense } from 'react';
-
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 
 export default function TranscriptDisplay({ transcriptData, currentTime, onTimeSelect }: { transcriptData: any, currentTime: number, onTimeSelect: (time: number) => void }) {
     const transcriptRef = useRef<HTMLDivElement>(null);
@@ -8,22 +7,54 @@ export default function TranscriptDisplay({ transcriptData, currentTime, onTimeS
 
     useEffect(() => {
         if (!transcript.length) return;
+
         const activeIdx = transcript.findIndex((item, i) => currentTime >= item.start && currentTime < (transcript[i + 1]?.start ?? Infinity));
+
         if (activeIdx !== -1 && activeIdx !== currentTranscriptIndex) {
             setCurrentTranscriptIndex(activeIdx);
-            transcriptRef.current?.children[activeIdx]?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            const container = transcriptRef.current;
+            // Unsafely cast to HTMLElement to access properties like `children` and `getBoundingClientRect`.
+            // In a real-world scenario, you might want to add more robust type checking.
+            const element = container?.children[activeIdx] as HTMLElement;
+
+            // 👇 THE KEY CHANGE IS HERE 👇
+            if (container && element) {
+                const containerRect = container.getBoundingClientRect();
+                const elementRect = element.getBoundingClientRect();
+
+                // Check if the element is NOT within the visible bounds of the container
+                const isNotInView =
+                    elementRect.top < containerRect.top ||
+                    elementRect.bottom > containerRect.bottom;
+
+                // Only scroll if the element is not already visible
+                if (isNotInView) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
         }
     }, [currentTime, transcript, currentTranscriptIndex]);
 
     return (
         <div className="h-full">
-            <h2 className="text-2xl font-bold mb-4 sticky top-0 bg-background/80 py-2">Transcript</h2>
-            <div ref={transcriptRef} className="max-h-[80vh] overflow-y-auto space-y-1">
-                {transcript.map((item, idx) => (
-                    <p key={idx} onClick={() => onTimeSelect(item.start)} className={`p-2 cursor-pointer rounded ${idx === currentTranscriptIndex ? 'bg-primary/20' : 'hover:bg-muted'}`}>
-                        {item.text}
-                    </p>
-                ))}
+            {/* Faded Box Structure */}
+            <div className="bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow-sm">
+                <div ref={transcriptRef} className="max-h-[60vh] overflow-y-auto space-y-1 pr-2">
+                    {transcript.map((item, idx) => (
+                        <p
+                            key={idx}
+                            onClick={() => onTimeSelect(item.start)}
+                            className={`scroll-mt-32 p-2 cursor-pointer rounded transition-colors duration-200 ${
+                                idx === currentTranscriptIndex
+                                    ? 'bg-primary/20 text-primary-foreground'
+                                    : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+                            }`}
+                        >
+                            {item.text}
+                        </p>
+                    ))}
+                </div>
             </div>
         </div>
     );

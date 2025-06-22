@@ -40,7 +40,7 @@ export default function VideoPlayer({ videoUrl, onTimeUpdate, playerRef }: { vid
   };
 
   return (
-    <div className="aspect-video w-full bg-black rounded-lg mb-4 sticky top-4">
+    <div className="aspect-video w-full bg-black rounded-lg mb-4 sticky top-4 bottom-4">
         <div id={`player-${videoId}`} className="w-full h-full" />
     </div>
   );
